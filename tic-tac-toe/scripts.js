@@ -2,6 +2,8 @@ $(document).ready(function(){
 
     var move = 1;
     var play = true;
+    var xScore= 0;
+    var oScore= 0;
   
     $("#board tr td").click(function() {
         if ($(this).text()=="" && play) {
@@ -18,17 +20,16 @@ $(document).ready(function(){
         if (checkForWinner()!=-1 && checkForWinner()!="") { 
             if (checkForWinner()=="X") {
                 alert("Player 1 wins!");
-                reset()
+                reset();
+                xScore ++;
             }else if (checkForWinner()=="O"){
                 alert("Player 2 wins!"); 
-                reset()
+                reset();
+                oScore++;
             } 
             }
-        
-        if (checkForWinner()=-1 && move == 9){
-            alert("No winner this time! Play Again!")
-            reset()
-        }
+            document.getElementById("player1").innerHTML = xScore;
+            document.getElementById("player2").innerHTML= oScore;
          }
     });
     function checkForWinner() {

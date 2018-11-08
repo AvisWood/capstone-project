@@ -25,6 +25,8 @@
 #title{
     font-family: fantasy;
     font-weight: bolder;
+    color: red;
+    font-size: 70px;
 }
 
 #restart{
@@ -32,3 +34,12 @@
    margin-top: 20px;
     
 }
+
+#board tr td:hover { 
+    background: red; 
+  }
+
+.score{
+    color: red;
+}
+
